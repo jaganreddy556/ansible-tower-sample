@@ -3,5 +3,5 @@
   tasks:
     - name: Book Info status
       command: kubectl get nodes
-      debug:
+    - debug:
         msg: "Checking the book info deployment status"
