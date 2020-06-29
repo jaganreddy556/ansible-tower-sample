@@ -2,6 +2,7 @@
   hosts: all
   tasks:
     - name: Book Info status
-      command: kubectl get nodes
+      command: kubectl get pods -n default
+      register: op
     - debug:
-        msg: "Checking the book info deployment status"
+        msg: "Pod status: {{op.stdout}} "
