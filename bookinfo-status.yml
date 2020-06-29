@@ -5,4 +5,4 @@
       command: "kubectl get pods -n default"
       register: pods_status
     - debug: 
-         msg: "{{ pods_status.stdout }}"
+         msg: "{{ pods_status }}"
