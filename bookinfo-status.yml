@@ -4,5 +4,4 @@
     - name: Book Info status
       command: kubectl get pods -n default
       register: op
-    - debug:
-        msg: "{{ op.stdout }}"
+    - debug: msg="{{ op.stdout }}"
