@@ -5,4 +5,4 @@
       command: kubectl get pods -n default
       register: op
     - debug:
-        msg: "Pod status: {{op.stdout}} "
+        msg: "{{ op.stdout }}"
