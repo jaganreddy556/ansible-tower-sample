@@ -1,4 +1,4 @@
-- name: Hello World Sample
+- name: Check the status
   hosts: all
   tasks:
     - name: Book Info status
