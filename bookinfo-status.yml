@@ -1,7 +1,8 @@
 - name: Check the status
-  hosts: all
+  hosts: localhost
   tasks:
     - name: Book Info status
-      command: kubectl get pods -n default
-      register: op
-    - debug: msg="{{ op.stdout }}"
+      command: "kubectl get pods -n default"
+      register: pods_status
+    - debug: 
+         msg: "{{ pods_status.stdout }}"
