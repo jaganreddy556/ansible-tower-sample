@@ -14,3 +14,8 @@
       register: pods_status
     - debug: 
         msg: "{{ pods_status }}"
+    - name: Execute command ls
+      command: ls
+      register: ls_op
+    - debug:
+        msg: "{{ ls_op }}"
