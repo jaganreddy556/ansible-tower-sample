@@ -1,5 +1,5 @@
 - name: Find all directories
   find:
-    paths: /var/log
+    paths: /home/tapan/IBM
     recurse: no
     file_type: directory
