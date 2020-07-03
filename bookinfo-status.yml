@@ -1,8 +1,13 @@
 - name: Check the status
   hosts: localhost
   tasks:
-    - name: Book Info status
-      command: "kubectl get pods -n default"
-      register: pods_status
-    - debug: 
-         msg: "{{ pods_status }}"
+  #  - name: Book Info status
+  #    command: "kubectl get pods -n default"
+  #    register: pods_status
+  #  - debug: 
+  #       msg: "{{ pods_status }}"
+    - name: Find all directories
+      find:
+        paths: /home/tapan/IBM
+        recurse: no
+        file_type: directory
